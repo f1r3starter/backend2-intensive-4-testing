@@ -5,7 +5,7 @@
     "verbose": false,
     "notify": true,
     "bail": false,
-    "collectCoverage": true,
+    "collectCoverage": false,
     "collectCoverageFrom": ["<rootDir>/source/**/*.js"],
     "coveragePathIgnorePatterns": [],
     "coverageThreshold": {
@@ -20,5 +20,6 @@
     "moduleFileExtensions": ["js", "json"],
     "globalSetup": "<rootDir>/jest/scripts/globalSetup.js",
     "globalTeardown": "<rootDir>/jest/scripts/globalTeardown.js",
-    "testURL": "http://www.test.com"
+    "testURL": "http://www.test.com",
+    "setupFiles": ["<rootDir>/jest/scripts/setupFiles.js"]
 }
