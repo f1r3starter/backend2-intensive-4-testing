@@ -1,6 +1,6 @@
-const testingUrl = `/api/users/${__.hash}`;
+const testingUrl = `/api/classes/${__.hash}`;
 
-describe('should /api/users/:hash request', () => {
+describe('should /api/classes/:hash request', () => {
     beforeAll(() => {
         __.server.set(__.authHeader);
     });
@@ -11,7 +11,7 @@ describe('should /api/users/:hash request', () => {
 
     test('should handle put request, response status 200', async (done) => {
         const response = await __.server.put(testingUrl).set({ Accept: 'application/json' })
-            .send(__.user);
+            .send({});
 
         expect(response.statusCode).toBe(200);
 

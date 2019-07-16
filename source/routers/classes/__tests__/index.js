@@ -1,9 +1,9 @@
-const testingUrl = '/api/users';
+const testingUrl = '/api/classes';
 
 describe('should handle post request', () => {
-    test('should return status 201 for correct user data', async (done) => {
-        const response = await __.server.post(testingUrl).set({ Accept: 'application/json' })
-            .send(__.user);
+    test('should return status 201 for correct class data', async (done) => {
+        const response = await __.server.post(testingUrl).set({ Accept: 'application/json', ...__.authHeader })
+            .send({});
 
         expect(response.statusCode).toBe(201);
 
@@ -20,8 +20,8 @@ describe('should handle post request', () => {
 });
 
 describe('should handle get request', () => {
-    test('should return status 200 with users array', async (done) => {
-        const response = await __.server.get(testingUrl).set({ Accept: 'application/json', ...__.authHeader })
+    test('should return status 200 with classes array', async (done) => {
+        const response = await __.server.get(testingUrl).set({ Accept: 'application/json' })
             .send();
 
         expect(response.statusCode).toBe(200);
