@@ -9,7 +9,7 @@ const server = request.agent(app);
 const hash = '123';
 const dotenv = require('dotenv');
 
-dotenv.config({ path: './../../.env' });
+dotenv.config({ path: '../.env' });
 global.__ = {
     authHeader,
     user,
