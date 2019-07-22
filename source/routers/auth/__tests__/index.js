@@ -17,7 +17,7 @@ describe('should handle login request', () => {
 
 describe('should handle logout request', () => {
     test('should return status 204 with empty response', async (done) => {
-        const response = await __.server.post('/api/logout').set({ Accept: 'application/json', ...__.authHeader})
+        const response = await __.server.post('/api/logout').set(__.authHeader)
             .send();
 
         expect(response.statusCode).toBe(204);

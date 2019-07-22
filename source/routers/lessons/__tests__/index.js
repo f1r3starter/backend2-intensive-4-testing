@@ -2,7 +2,7 @@ const testingUrl = '/api/lessons';
 
 describe('should handle post request', () => {
     test('should return status 201 for correct lesson data', async (done) => {
-        const response = await __.server.post(testingUrl).set({ Accept: 'application/json', ...__.authHeader })
+        const response = await __.server.post(testingUrl).set(__.authHeader)
             .send({});
 
         expect(response.statusCode).toBe(201);

@@ -21,7 +21,7 @@ describe('should handle post request', () => {
 
 describe('should handle get request', () => {
     test('should return status 200 with users array', async (done) => {
-        const response = await __.server.get(testingUrl).set({ Accept: 'application/json', ...__.authHeader })
+        const response = await __.server.get(testingUrl).set(__.authHeader)
             .send();
 
         expect(response.statusCode).toBe(200);

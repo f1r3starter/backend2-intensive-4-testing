@@ -2,7 +2,7 @@ const testingUrl = `/api/lessons/${__.hash}/videos`;
 
 describe('should handle post request', () => {
     test('should return status 200', async (done) => {
-        const response = await __.server.post(testingUrl).set({ Accept: 'application/json', ...__.authHeader })
+        const response = await __.server.post(testingUrl).set(__.authHeader)
             .send(__.user);
 
         expect(response.statusCode).toBe(200);
