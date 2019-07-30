@@ -3,6 +3,5 @@
     "projects": [
         "<rootDir>/jest/jest.test.config.json",
         "<rootDir>/jest/jest.eslint.config.json"
-    ],
-    "setupFiles": ["dotenv/config"]
+    ]
 }

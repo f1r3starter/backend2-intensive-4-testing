@@ -1,8 +1,12 @@
+// Core
 import dg from 'debug';
 
 // Instruments
+import { getPort } from './utils';
 import { app } from './server';
-import { getPort} from './utils';
+
+// DB
+import './db';
 
 const debug = dg('server:main');
 const PORT = getPort();
