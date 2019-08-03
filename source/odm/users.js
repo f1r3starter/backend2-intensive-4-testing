@@ -16,6 +16,7 @@ const usersSchema = new mongoose.Schema({
         type: String,
         enum: [ 'm', 'f' ],
     },
+    socials: Map,
 });
 
 export const users = mongoose.model('users', usersSchema);
