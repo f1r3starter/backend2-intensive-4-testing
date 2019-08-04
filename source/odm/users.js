@@ -16,7 +16,12 @@ const usersSchema = new mongoose.Schema({
         type: String,
         enum: [ 'm', 'f' ],
     },
-    socials: Map,
+    social: {
+        facebook: "String",
+        linkedin: "String",
+        github:   "String",
+        skype:    "String"
+    },
 });
 
 export const users = mongoose.model('users', usersSchema);
