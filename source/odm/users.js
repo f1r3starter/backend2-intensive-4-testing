@@ -6,22 +6,34 @@ const usersSchema = new mongoose.Schema({
         first: String,
         last:  String,
     },
-    email:    String,
-    phone:    String,
-    password: {
-        type:   String,
-        select: false,
-    },
-    sex: {
+    phones: [
+        {
+            email:   String,
+            primary: Boolean,
+        },
+    ],
+    emails: [
+        {
+            email:   String,
+            primary: Boolean,
+        },
+    ],
+    password: String,
+    sex:      {
         type: String,
         enum: [ 'm', 'f' ],
     },
     social: {
-        facebook: "String",
-        linkedin: "String",
-        github:   "String",
-        skype:    "String"
+        facebook: String,
+        linkedin: String,
+        github:   String,
+        skype:    String,
     },
+    notes:    String,
+    hash:     String,
+    disabled: Boolean,
+    created:  Date,
+    modified: Date,
 });
 
 export const users = mongoose.model('users', usersSchema);
