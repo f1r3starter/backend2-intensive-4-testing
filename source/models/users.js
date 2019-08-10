@@ -26,7 +26,7 @@ export class Users {
             },
             sex,
             emails:   [{ email, primary: true }],
-            roles:    [ role ],
+            roles:    [ role, default: user ],
             phones:   [{ phone, primary: true }],
             password: hashedPassword,
         };
