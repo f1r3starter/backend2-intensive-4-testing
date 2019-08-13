@@ -13,4 +13,8 @@ export class Lessons {
 
         return data;
     }
+
+    async delete(id) {
+        await this.models.lessons.delete(id);
+    }
 }

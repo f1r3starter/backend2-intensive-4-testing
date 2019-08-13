@@ -13,4 +13,8 @@ export class Users {
 
         return data;
     }
+
+    async delete() {
+        await this.models.users.delete(id);
+    }
 }
