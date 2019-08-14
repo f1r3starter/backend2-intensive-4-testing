@@ -14,7 +14,7 @@ export class Users {
         return data;
     }
 
-    async delete() {
+    async delete(id) {
         await this.models.users.delete(id);
     }
 }
